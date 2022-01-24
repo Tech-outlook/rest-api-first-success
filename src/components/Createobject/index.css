@@ -1,0 +1,21 @@
+.main-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 0px;
+  background: lightgray;
+  height: 82vh;
+}
+
+.API-create-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0px 20px;
+}
+.form-group{
+  margin: 15px 0px;
+}
+label{
+  font-weight: bold;
+}
