@@ -1,10 +1,11 @@
 import { useState } from "react";
 import database from "./firebase";
+import { v4 as uuidv4 } from "uuid";
 import "./index.css";
 
 const Createobject = () => {
   const [data, setData] = useState({
-    id: "",
+    id: uuidv4(),
     title: "",
     Image_source_url: "",
     Source_code_link: "",
@@ -14,12 +15,20 @@ const Createobject = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const submitUserData = (e) => {
+  const submitUserData = async (e) => {
     e.preventDefault();
-    database.child("apidata").push(data, (err) => {
+    var dataAdded = await database.child("apidata").push(data, (err) => {
       if (err) {
         console.log(err);
+      } else {
+        alert("Data Added");
       }
+    });
+    setData({
+      id: "",
+      title: "",
+      Image_source_url: "",
+      Source_code_link: "",
     });
   };
   return (
@@ -27,20 +36,6 @@ const Createobject = () => {
       <div className="API-create-div">
         <h1>Create, Post, your API Object Here</h1>
         <form className="form-horizontal" onSubmit={submitUserData}>
-          <div className="form-group">
-            <label className="control-label">ID:</label>
-            <div>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Id for API-object"
-                onChange={dataFromUser}
-                value={data.id}
-                name="id"
-              />
-            </div>
-          </div>
-
           <div className="form-group">
             <label className="control-label">Title</label>
             <div>
