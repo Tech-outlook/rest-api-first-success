@@ -11,6 +11,14 @@ const Apidata = () => {
       setGetData(details.val());
     });
   }, []);
+
+  const deleteApiData = (key) => {
+    database.child(`apidata/${key}`).remove((err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  };
   return (
     <div className="ApiDataDiv">
       {getData &&
@@ -29,7 +37,12 @@ const Apidata = () => {
               <span>Source Code :-</span> {getData[key].Source_code_link}
             </p>
             <button className="btn btn-success">Update</button>
-            <button className="btn btn-danger">Delete</button>
+            <button
+              className="btn btn-danger"
+              onClick={() => deleteApiData(key)}
+            >
+              Delete
+            </button>
           </div>
         ))}
     </div>
