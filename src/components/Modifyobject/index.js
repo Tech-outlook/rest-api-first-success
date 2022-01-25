@@ -6,7 +6,7 @@ import "./index.css";
 
 const Modifyobject = () => {
   let query = new URLSearchParams(useLocation().search);
-
+   
   const [data, setData] = useState({
     id: uuidv4(),
     title: "",
