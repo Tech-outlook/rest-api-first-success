@@ -32,7 +32,6 @@ const Createobject = () => {
       }
     });
     setData({
-      id: "",
       title: "",
       Image_source_url: "",
       Source_code_link: "",
@@ -108,6 +107,8 @@ const Createobject = () => {
               <p>
                 <span>Source Code :-</span> {getData[key].Source_code_link}
               </p>
+              <button className="btn btn-success">Update</button>
+              <button className="btn btn-danger">Delete</button>
             </div>
           ))}
       </div>

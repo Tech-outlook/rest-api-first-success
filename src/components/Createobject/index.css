@@ -35,13 +35,20 @@ label{
   padding: 10px;
   border-radius: 5px;
 }
+
 .ApiDataDiv div p{
   color: green;
   font-weight: bold;
+  flex-wrap: wrap;
+  word-wrap: break-word;
 }
 
 .ApiDataDiv div p span{
   font-weight: bold;
   color: brown;
   font-family: "Bree serif";
+}
+
+.ApiDataDiv div button{
+  margin-right:10px;
 }
