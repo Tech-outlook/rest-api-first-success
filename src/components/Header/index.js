@@ -9,10 +9,19 @@ class Header extends Component {
         <h1>API Object Creating</h1>
         <ul>
           <li>
-            <Link className="link" to="../Createobject">Create</Link>
+            <Link className="link" to="../Createobject">
+              Create
+            </Link>
           </li>
           <li>
-            <Link className="link" to="../Modifyobject">Edit / Delete</Link>
+            <Link className="link" to="../Modifyobject">
+              Edit / Delete
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="../APIobjects">
+              API objects
+            </Link>
           </li>
         </ul>
       </nav>
