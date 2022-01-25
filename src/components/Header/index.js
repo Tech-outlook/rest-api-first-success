@@ -13,11 +13,7 @@ class Header extends Component {
               Create
             </Link>
           </li>
-          <li>
-            <Link className="link" to="../Modifyobject">
-              Edit / Delete
-            </Link>
-          </li>
+
           <li>
             <Link className="link" to="../APIobjects">
               API objects

@@ -1,0 +1,32 @@
+.ApiDataDiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white;
+    width: 100%;
+    padding-top: 18vh;
+  }
+  
+  .ApiDataDiv div{
+    margin: 10px;
+    border: 2px solid gold;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .ApiDataDiv div p{
+    color: green;
+    font-weight: bold;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+  
+  .ApiDataDiv div p span{
+    font-weight: bold;
+    color: brown;
+    font-family: "Bree serif";
+  }
+  
+  .ApiDataDiv div button{
+    margin-right:10px;
+  }

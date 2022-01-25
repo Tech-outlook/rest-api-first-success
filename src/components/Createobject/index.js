@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import database from "./firebase";
 import { v4 as uuidv4 } from "uuid";
 import "./index.css";
@@ -10,13 +10,6 @@ const Createobject = () => {
     Image_source_url: "",
     Source_code_link: "",
   });
-  const [getData, setGetData] = useState({});
-
-  useEffect(() => {
-    database.child("apidata").on("value", (details) => {
-      setGetData(details.val());
-    });
-  }, []);
 
   const dataFromUser = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -90,27 +83,6 @@ const Createobject = () => {
             </div>
           </div>
         </form>
-      </div>
-      <div className="ApiDataDiv">
-        {getData &&
-          Object.keys(getData).map((key) => (
-            <div>
-              <p>
-                <span>ID :-</span> {getData[key].id}
-              </p>
-              <p>
-                <span>Title :-</span> {getData[key].title}
-              </p>
-              <p>
-                <span>Image Source :-</span> {getData[key].Image_source_url}
-              </p>
-              <p>
-                <span>Source Code :-</span> {getData[key].Source_code_link}
-              </p>
-              <button className="btn btn-success">Update</button>
-              <button className="btn btn-danger">Delete</button>
-            </div>
-          ))}
       </div>
     </div>
   );
