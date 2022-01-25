@@ -14,11 +14,9 @@ const Createobject = () => {
 
   useEffect(() => {
     database.child("apidata").on("value", (details) => {
-      console.log(details.val());
       setGetData(details.val());
     });
   }, []);
-
   const dataFromUser = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
