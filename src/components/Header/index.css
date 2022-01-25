@@ -36,3 +36,9 @@ li {
   margin: 0px 20px;
   cursor: pointer;
 }
+
+@media (max-width:785px){
+  li{
+    font-size: 12px;
+  }
+}

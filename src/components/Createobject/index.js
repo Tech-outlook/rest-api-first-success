@@ -17,6 +17,7 @@ const Createobject = () => {
       setGetData(details.val());
     });
   }, []);
+
   const dataFromUser = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -90,6 +91,25 @@ const Createobject = () => {
             </div>
           </div>
         </form>
+      </div>
+      <div className="ApiDataDiv">
+        {getData &&
+          Object.keys(getData).map((key) => (
+            <div>
+              <p>
+                <span>ID :-</span> {getData[key].id}
+              </p>
+              <p>
+                <span>Title :-</span> {getData[key].title}
+              </p>
+              <p>
+                <span>Image Source :-</span> {getData[key].Image_source_url}
+              </p>
+              <p>
+                <span>Source Code :-</span> {getData[key].Source_code_link}
+              </p>
+            </div>
+          ))}
       </div>
     </div>
   );

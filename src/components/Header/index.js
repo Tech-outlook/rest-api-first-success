@@ -5,7 +5,7 @@ import "./index.css";
 class Header extends Component {
   render() {
     return (
-      <nav className="Navbar">
+      <nav className="Navbar fixed-top">
         <h1>API Object Creating</h1>
         <ul>
           <li>
