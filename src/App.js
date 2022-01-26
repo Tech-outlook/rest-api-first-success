@@ -13,6 +13,7 @@ function App() {
         <Route path="/Createobject" exact component={Createobject}></Route>
         <Route path="/Modifyobject" exact component={Modifyobject}></Route>
         <Route path="/APIobjects" exact component={Apidata}></Route>
+        <Route component={Apidata}></Route>
       </Switch>
     </BrowserRouter>
   );
