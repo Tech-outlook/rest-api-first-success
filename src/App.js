@@ -9,6 +9,7 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Loginpage />
       <Switch>
         <Route path="/Header" exact component={Header}></Route>

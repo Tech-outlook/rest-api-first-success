@@ -7,19 +7,22 @@ class Header extends Component {
     return (
       <nav className="Navbar fixed-top">
         <h1>API Object Creating</h1>
-        <ul>
-          <li>
-            <Link className="link" to="../Createobject">
-              Create
-            </Link>
-          </li>
+        <div className="linksdiv">
+          <ul>
+            <li>
+              <Link className="link" to="../Createobject">
+                Create
+              </Link>
+            </li>
 
-          <li>
-            <Link className="link" to="../APIobjects">
-              API objects
-            </Link>
-          </li>
-        </ul>
+            <li>
+              <Link className="link" to="../APIobjects">
+                API objects
+              </Link>
+            </li>
+          </ul>
+          <button className="logout-btn">Logout</button>
+        </div>
       </nav>
     );
   }

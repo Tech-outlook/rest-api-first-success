@@ -1,7 +1,7 @@
 body {
   cursor: default;
 }
-.link{
+.link {
   text-decoration: none;
   font-weight: bold;
 }
@@ -11,12 +11,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid red;
 }
 
 h1 {
   font-size: 25px;
   font-family: "Bree serif";
   margin: 10px;
+}
+
+.linksdiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-right: 70px;
+}
+
+.logout-btn {
+  border: 0px;
+  height: 37px;
+  width: 100px;
+  background: white;
+  color: red;
+  font-family: "Roboto";
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 ul {
@@ -26,7 +46,6 @@ ul {
   width: 80%;
 
   display: flex;
-  justify-content: center;
 }
 li {
   background: white;
@@ -37,8 +56,8 @@ li {
   cursor: pointer;
 }
 
-@media (max-width:785px){
-  li{
+@media (max-width: 785px) {
+  li {
     font-size: 12px;
   }
 }
