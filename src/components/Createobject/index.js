@@ -55,7 +55,7 @@ const Createobject = () => {
             <label className="control-label">Image Source URL</label>
             <div>
               <input
-                type=""
+                type="url"
                 className="form-control"
                 placeholder="Enter Image Source URL"
                 onChange={dataFromUser}
@@ -69,7 +69,7 @@ const Createobject = () => {
             <label className="control-label">Source Code Link</label>
             <div>
               <input
-                type="text"
+                type="url"
                 className="form-control"
                 placeholder="Enter Source Code Link"
                 onChange={dataFromUser}
