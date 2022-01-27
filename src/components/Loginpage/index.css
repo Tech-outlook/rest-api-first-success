@@ -23,6 +23,15 @@
 .form input {
   outline: none !important;
 }
+.form a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.form a:hover {
+  text-decoration: underline !important;
+  color: green;
+}
 
 @media (max-width: 758px) {
   .form {
