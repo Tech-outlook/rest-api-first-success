@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Component } from "react";
+import authdb from "../Createobject/firebase";
 import "./index.css";
 
 class Header extends Component {
@@ -21,7 +22,9 @@ class Header extends Component {
               </Link>
             </li>
           </ul>
-          <button className="logout-btn">Logout</button>
+          <button onClick={() => authdb.signOut()} className="logout-btn">
+            Logout
+          </button>
         </div>
       </nav>
     );
