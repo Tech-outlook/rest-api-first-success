@@ -15,17 +15,22 @@ const Loginpage = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const signIn = (e) => {
+  const signIn = async (e) => {
     e.preventDefault();
-    authdb
+    var dataauth = await authdb
       .signInWithEmailAndPassword(email, password)
       .then((user) => console.log(user))
       .catch((err) => console.log(err));
+
+    setData({
+      email: "",
+      password: "",
+    });
   };
 
   return (
     <div className="Login-page">
-      <h1>Hello i am from Login page</h1>
+      <h1>Hey Admin Login First</h1>
       <form className="form">
         <input
           type="email"
