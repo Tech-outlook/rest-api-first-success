@@ -11,6 +11,8 @@ const Createobject = () => {
     Source_code_link: "",
   });
 
+  const { title, Image_source_url, Source_code_link } = { ...data };
+
   const dataFromUser = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -25,18 +27,22 @@ const Createobject = () => {
       }
     });
     setData({
-      id:"",
+      id: "",
       title: "",
       Image_source_url: "",
       Source_code_link: "",
     });
   };
-  
+
   return (
     <div className="main-container">
       <div className="API-create-div">
         <h1>Create, Post, your API Object Here</h1>
-        <form className="form-horizontal" onSubmit={submitUserData} autoComplete="off">
+        <form
+          className="form-horizontal"
+          onSubmit={submitUserData}
+          autoComplete="off"
+        >
           <div className="form-group">
             <label className="control-label">Title</label>
             <div>
@@ -45,7 +51,7 @@ const Createobject = () => {
                 className="form-control"
                 placeholder="Enter Title"
                 onChange={dataFromUser}
-                value={data.title}
+                value={title}
                 name="title"
               />
             </div>
@@ -59,7 +65,7 @@ const Createobject = () => {
                 className="form-control"
                 placeholder="Enter Image Source URL"
                 onChange={dataFromUser}
-                value={data.Image_source_url}
+                value={Image_source_url}
                 name="Image_source_url"
               />
             </div>
@@ -73,7 +79,7 @@ const Createobject = () => {
                 className="form-control"
                 placeholder="Enter Source Code Link"
                 onChange={dataFromUser}
-                value={data.Source_code_link}
+                value={Source_code_link}
                 name="Source_code_link"
               />
             </div>
