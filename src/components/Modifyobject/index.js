@@ -54,7 +54,7 @@ const Modifyobject = () => {
                 type="text"
                 className="form-control"
                 placeholder="Enter Title"
-                value={data.title}
+                defaultValue={data.title}
                 name="title"
                 onChange={dataFromUser}
               />
@@ -68,7 +68,7 @@ const Modifyobject = () => {
                 type=""
                 className="form-control"
                 placeholder="Enter Image Source URL"
-                value={data.Image_source_url}
+                defaultValue={data.Image_source_url}
                 name="Image_source_url"
                 onChange={dataFromUser}
               />
@@ -82,7 +82,7 @@ const Modifyobject = () => {
                 type="text"
                 className="form-control"
                 placeholder="Enter Source Code Link"
-                value={data.Source_code_link}
+                defaultValue={data.Source_code_link}
                 name="Source_code_link"
                 onChange={dataFromUser}
               />

@@ -51,7 +51,7 @@ const Createobject = () => {
                 className="form-control"
                 placeholder="Enter Title"
                 onChange={dataFromUser}
-                value={title}
+                defaultValue={title}
                 name="title"
               />
             </div>
@@ -65,7 +65,7 @@ const Createobject = () => {
                 className="form-control"
                 placeholder="Enter Image Source URL"
                 onChange={dataFromUser}
-                value={Image_source_url}
+                defaultValue={Image_source_url}
                 name="Image_source_url"
               />
             </div>
@@ -79,7 +79,7 @@ const Createobject = () => {
                 className="form-control"
                 placeholder="Enter Source Code Link"
                 onChange={dataFromUser}
-                value={Source_code_link}
+                defaultValue ={Source_code_link}
                 name="Source_code_link"
               />
             </div>
