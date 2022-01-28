@@ -1,10 +1,7 @@
 body {
   cursor: default;
 }
-.link {
-  text-decoration: none;
-  font-weight: bold;
-}
+
 .Navbar {
   background: lightblue;
 
@@ -22,13 +19,23 @@ h1 {
 
 .linksdiv {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  padding-right: 70px;
+  padding: 5px 0px;
 }
 
 .logout-btn {
+  border: 0px;
+  height: 37px;
+  width: 100px;
+  background: white;
+  color: red;
+  font-family: "Roboto";
+  font-weight: bold;
+  border-radius: 5px;
+}
+.button {
   border: 0px;
   height: 37px;
   width: 100px;

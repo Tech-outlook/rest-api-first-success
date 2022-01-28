@@ -13,24 +13,19 @@ class Header extends Component {
       <nav className="Navbar fixed-top">
         <h1>API Object Creating</h1>
         <div className="linksdiv">
-          <ul>
-            <li>
-              <Link className="link" to="../Createobject">
-                Create
-              </Link>
-            </li>
+          <Link className="link" to="../Createobject">
+            <button className="button">Create</button>
+          </Link>
 
-            <li>
-              <Link className="link" to="../APIobjects">
-                API objects
-              </Link>
-            </li>
-          </ul>
-          <a href="https://tech-outlook.github.io/REST-API-Final">
+          <Link className="link" to="../APIobjects">
+            <button className="button">API Objects</button>
+          </Link>
+
+          <Link href="https://tech-outlook.github.io/REST-API-Final">
             <button onClick={signoutAndRefresh} className="logout-btn">
               Logout
             </button>
-          </a>
+          </Link>
         </div>
       </nav>
     );
