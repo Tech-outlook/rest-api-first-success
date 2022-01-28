@@ -21,11 +21,11 @@ class Header extends Component {
             <button className="button">API Objects</button>
           </Link>
 
-          <Link href="https://tech-outlook.github.io/REST-API-Final">
+          <a href="https://tech-outlook.github.io/REST-API-Final">
             <button onClick={signoutAndRefresh} className="logout-btn">
               Logout
             </button>
-          </Link>
+          </a>
         </div>
       </nav>
     );
