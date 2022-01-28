@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import authdb from "../Createobject/firebase";
+import { authdb } from "../Createobject/firebase";
 import "./index.css";
 
 class Header extends Component {
