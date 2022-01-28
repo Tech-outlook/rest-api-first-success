@@ -15,17 +15,12 @@ const Loginpage = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const signIn = async (e) => {
+  const signIn = (e) => {
     e.preventDefault();
-    var dataauth = await authdb
+    authdb
       .signInWithEmailAndPassword(email, password)
-      .then((user) => console.log(user))
+      .then((user) => setData(user))
       .catch((err) => console.log(err));
-
-    setData({
-      email: "",
-      password: "",
-    });
   };
 
   return (
