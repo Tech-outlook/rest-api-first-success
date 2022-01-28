@@ -6,7 +6,7 @@ import "./index.css";
 
 const Modifyobject = () => {
   let query = new URLSearchParams(useLocation().search);
-   
+
   const [data, setData] = useState({
     id: uuidv4(),
     title: "",
@@ -27,26 +27,26 @@ const Modifyobject = () => {
     });
   }, []);
 
-  const onSubmit = e =>{
+  const onSubmit = (e) => {
     e.preventDefault();
-    database.child(`apidata/${query.get('key')}`).set(
-      data,
-      err =>{
-        if(err){
-          console.log(err)
-        }
-        else{
-          alert("Data updated")
-        }
+    database.child(`apidata/${query.get("key")}`).set(data, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        alert("Data updated");
       }
-    )
-  }
+    });
+  };
 
   return (
     <div className="main-container">
       <div className="API-create-div">
         <h1>Edit and Save your API Object Here</h1>
-        <form className="form-horizontal" onSubmit={onSubmit} autoComplete="off">
+        <form
+          className="form-horizontal"
+          onSubmit={onSubmit}
+          autoComplete="off"
+        >
           <div className="form-group">
             <label className="control-label">Title</label>
             <div>
