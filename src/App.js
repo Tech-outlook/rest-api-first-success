@@ -27,7 +27,6 @@ function App() {
     <BrowserRouter>
       {presentUser ? <Header /> : <Loginpage />}
       <Switch>
-        <Route path="/Header" exact component={Header}></Route>
         <Route path="/Createobject" exact component={Createobject}></Route>
         <Route path="/Modifyobject" exact component={Modifyobject}></Route>
         <Route path="/APIobjects" exact component={Apidata}></Route>

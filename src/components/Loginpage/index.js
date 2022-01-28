@@ -4,22 +4,22 @@ import "./index.css";
 import { authdb } from "../Createobject/firebase";
 
 const Loginpage = () => {
-  const [data, setData] = useState({
+  const [logindata, setLoginData] = useState({
     email: "",
     password: "",
   });
 
-  const { email, password } = data;
+  const { email, password } = logindata;
 
   const onchangeHandler = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
+    setLoginData({ ...logindata, [e.target.name]: e.target.value });
   };
 
   const signIn = (e) => {
     e.preventDefault();
     authdb
       .signInWithEmailAndPassword(email, password)
-      .then((user) => setData(user))
+      .then((user) => console.log(user))
       .catch((err) => console.log(err));
   };
 

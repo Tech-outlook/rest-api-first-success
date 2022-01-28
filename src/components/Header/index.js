@@ -5,6 +5,10 @@ import "./index.css";
 
 class Header extends Component {
   render() {
+    const signoutAndRefresh = () => {
+      authdb.signOut();
+      window.location.reload();
+    };
     return (
       <nav className="Navbar fixed-top">
         <h1>API Object Creating</h1>
@@ -22,7 +26,7 @@ class Header extends Component {
               </Link>
             </li>
           </ul>
-          <button onClick={() => authdb.signOut()} className="logout-btn">
+          <button onClick={signoutAndRefresh} className="logout-btn">
             Logout
           </button>
         </div>
